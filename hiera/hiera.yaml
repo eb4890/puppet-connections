@@ -1,0 +1,12 @@
+:backends:
+  - yaml
+:yaml:
+  :datadir: ./
+
+:hierarchy:
+  - clusters/common
+  - connections/common
+  - "connections/%{::network}"
+  - "role/%{::role}"
+  - "env/%{::env}"
+  - common

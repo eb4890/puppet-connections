@@ -1,0 +1,8 @@
+connection::cluster:mongodb
+  cluster_ports: 
+    - 5432
+  client_ports: 
+    - 8080
+  client_ip_ranges:
+    - "%{hiera(mongodb_cluster_range)}"
+   
