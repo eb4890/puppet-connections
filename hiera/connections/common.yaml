@@ -1,0 +1,4 @@
+connection:
+  mongodb_ongodb:
+    src_cluster: mongodb
+    dest_cluster: ongodb

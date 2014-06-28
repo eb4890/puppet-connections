@@ -1,0 +1,4 @@
+---
+cluster_member:
+  mongodb:
+   param: fred

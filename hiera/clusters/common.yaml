@@ -1,8 +1,21 @@
-connection::cluster:mongodb
-  cluster_ports: 
-    - 5432
-  client_ports: 
-    - 8080
-  client_ip_ranges:
-    - "%{hiera(mongodb_cluster_range)}"
-   
+---
+cluster: 
+  mongodb:
+      internal_ports: 
+        - 5432
+      external_ports: 
+        - 8080
+      external_ip_ranges:
+        - "%{hiera('mongodb_cluster_range')}"
+      internal_ip_ranges:
+        - "%{hiera('mongodb_cluster_range')}"
+  ongodb:
+      internal_ports: 
+        - 5432
+      external_ports: 
+        - 8080
+      external_ip_ranges:
+        - "%{hiera('mongodb_cluster_range')}"
+      internal_ip_ranges:
+        - "%{hiera('mongodb_cluster_range')}"
+
